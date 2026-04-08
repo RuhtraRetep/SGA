@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SGA1
+namespace Forms
 {
-    public partial class F_Pesquisar : Form
+    public partial class F_Atualizar : Form
     {
-        public F_Pesquisar()
+        public F_Atualizar()
         {
             InitializeComponent();
         }

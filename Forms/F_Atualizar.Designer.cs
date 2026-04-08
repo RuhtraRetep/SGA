@@ -1,6 +1,6 @@
-﻿namespace SGA1
+﻿namespace Forms
 {
-    partial class F_Pesquisar
+    partial class F_Atualizar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Pesquisar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Atualizar));
             txtMatricula = new TextBox();
             btnVerificar = new Button();
             panel1 = new Panel();

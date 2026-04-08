@@ -1,4 +1,4 @@
-﻿namespace SGA1
+﻿namespace Forms
 {
     partial class F_Excluir
     {
@@ -43,12 +43,13 @@
             // 
             // btnDeletar
             // 
-            btnDeletar.Location = new Point(374, 234);
+            btnDeletar.Location = new Point(370, 166);
             btnDeletar.Name = "btnDeletar";
             btnDeletar.Size = new Size(75, 23);
             btnDeletar.TabIndex = 1;
             btnDeletar.Text = "Excluir";
             btnDeletar.UseVisualStyleBackColor = true;
+            btnDeletar.Click += btnDeletar_Click;
             // 
             // F_Excluir
             // 

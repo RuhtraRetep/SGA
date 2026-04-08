@@ -1,4 +1,4 @@
-﻿namespace SGA1
+﻿namespace Forms
 {
     partial class F_Cadastrar
     {
@@ -94,6 +94,7 @@
             btnEnviar.TabIndex = 11;
             btnEnviar.Text = "Enviar";
             btnEnviar.UseVisualStyleBackColor = true;
+            btnEnviar.Click += btnEnviar_Click;
             // 
             // panel1
             // 

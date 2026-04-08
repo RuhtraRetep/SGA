@@ -1,4 +1,4 @@
-﻿namespace SGA1
+﻿namespace Forms
 {
     partial class F_TelaPrincipal
     {

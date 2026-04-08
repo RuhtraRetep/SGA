@@ -1,4 +1,4 @@
-namespace SGA1
+namespace Forms
 {
     internal static class Program
     {
