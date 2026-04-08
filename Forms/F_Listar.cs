@@ -38,67 +38,9 @@ namespace Forms
 
 
         }
-        private void BuscarAlunos()
-        {
-            dgvExibirAlunos.DataSource = null;
-
-            if (txtMatricula.Text != string.Empty && txtNome.Text != string.Empty)
-            {
-                MessageBox.Show("Preencha UM dos campos");
-                return;
-            }
-
-            if (txtNome.Text != string.Empty )
-            {
-                using (MySqlConnection conn = new MySqlConnection(conexao))
-                {
-                    string query = "SELECT * FROM alunos WHERE nome = @nome";
-                    try
-                    {
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-
-                        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        dgvExibirAlunos.DataSource = dt;
-                    }
-
-                    catch (Exception ex) { MessageBox.Show("Erro no Try" + ex.Message); }
-                }
-                return;
-            }
-
-            if (txtMatricula.Text != string.Empty)
-            {
-                using (MySqlConnection conn = new MySqlConnection(conexao))
-                {
-                    string query = "SELECT * FROM alunos WHERE matricula = @matricula";
-                    try
-                    {
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@matricula", Convert.ToInt32(txtMatricula.Text));
-
-                        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        dgvExibirAlunos.DataSource = dt;
-                    }
-
-                    catch (Exception ex) { MessageBox.Show("Erro no Try" + ex.Message); }
-                }
-                return;
-            }
-
-            MessageBox.Show("Preencha UM dos campos");
-        }
         private void btnListar_Click(object sender, EventArgs e)
         {
             ListarAlunos();
-        }
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            BuscarAlunos();
         }
     }
 }

@@ -79,10 +79,12 @@
             toolStripButton10 = new ToolStripButton();
             toolStripSeparator8 = new ToolStripSeparator();
             toolStripButton11 = new ToolStripButton();
-            toolStripTextBox1 = new ToolStripTextBox();
+            txtBuscar = new ToolStripTextBox();
             toolStripButton12 = new ToolStripButton();
+            dgvExibirAlunos = new DataGridView();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvExibirAlunos).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -338,7 +340,7 @@
             // toolStrip1
             // 
             toolStrip1.AutoSize = false;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator6, toolStripButton4, toolStripButton5, toolStripButton6, toolStripSeparator7, toolStripButton7, toolStripButton8, toolStripButton9, toolStripButton10, toolStripSeparator8, toolStripButton11, toolStripTextBox1, toolStripButton12 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator6, toolStripButton4, toolStripButton5, toolStripButton6, toolStripSeparator7, toolStripButton7, toolStripButton8, toolStripButton9, toolStripButton10, toolStripSeparator8, toolStripButton11, txtBuscar, toolStripButton12 });
             toolStrip1.Location = new Point(5, 24);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(790, 50);
@@ -474,12 +476,12 @@
             toolStripButton11.Size = new Size(30, 47);
             toolStripButton11.Text = "toolStripButton11";
             // 
-            // toolStripTextBox1
+            // txtBuscar
             // 
-            toolStripTextBox1.Alignment = ToolStripItemAlignment.Right;
-            toolStripTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 50);
+            txtBuscar.Alignment = ToolStripItemAlignment.Right;
+            txtBuscar.BorderStyle = BorderStyle.FixedSingle;
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(100, 50);
             // 
             // toolStripButton12
             // 
@@ -490,12 +492,25 @@
             toolStripButton12.Name = "toolStripButton12";
             toolStripButton12.Size = new Size(23, 47);
             toolStripButton12.Text = "toolStripButton12";
+            toolStripButton12.Click += toolStripButton12_Click;
+            // 
+            // dgvExibirAlunos
+            // 
+            dgvExibirAlunos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvExibirAlunos.BackgroundColor = Color.Gray;
+            dgvExibirAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvExibirAlunos.Dock = DockStyle.Bottom;
+            dgvExibirAlunos.Location = new Point(5, 228);
+            dgvExibirAlunos.Name = "dgvExibirAlunos";
+            dgvExibirAlunos.Size = new Size(790, 369);
+            dgvExibirAlunos.TabIndex = 3;
             // 
             // F_TelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 597);
+            Controls.Add(dgvExibirAlunos);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -509,6 +524,7 @@
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvExibirAlunos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -561,11 +577,12 @@
         private ToolStripButton toolStripButton10;
         private ToolStripSeparator toolStripSeparator8;
         private ToolStripButton toolStripButton11;
-        private ToolStripTextBox toolStripTextBox1;
+        private ToolStripTextBox txtBuscar;
         private ToolStripButton toolStripButton12;
         private ToolStripMenuItem cadastrarToolStripMenuItem;
         private ToolStripMenuItem excluirToolStripMenuItem;
         private ToolStripMenuItem atualizarToolStripMenuItem;
         private ToolStripMenuItem listarToolStripMenuItem;
+        private DataGridView dgvExibirAlunos;
     }
 }

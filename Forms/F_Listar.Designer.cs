@@ -29,68 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Listar));
-            txtNome = new TextBox();
-            txtMatricula = new TextBox();
-            btnBuscar = new Button();
             btnListar = new Button();
             dgvExibirAlunos = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvExibirAlunos).BeginInit();
             SuspendLayout();
             // 
-            // txtNome
-            // 
-            txtNome.Location = new Point(158, 44);
-            txtNome.Name = "txtNome";
-            txtNome.PlaceholderText = "Nome";
-            txtNome.Size = new Size(100, 23);
-            txtNome.TabIndex = 0;
-            // 
-            // txtMatricula
-            // 
-            txtMatricula.Location = new Point(326, 44);
-            txtMatricula.Name = "txtMatricula";
-            txtMatricula.PlaceholderText = "Id";
-            txtMatricula.Size = new Size(100, 23);
-            txtMatricula.TabIndex = 1;
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.Location = new Point(172, 103);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(75, 23);
-            btnBuscar.TabIndex = 2;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
-            btnBuscar.Click += btnBuscar_Click;
-            // 
             // btnListar
             // 
-            btnListar.Location = new Point(501, 87);
+            btnListar.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnListar.Location = new Point(357, 95);
             btnListar.Name = "btnListar";
-            btnListar.Size = new Size(85, 39);
+            btnListar.Size = new Size(81, 31);
             btnListar.TabIndex = 3;
-            btnListar.Text = "Listar todos os alunos";
+            btnListar.Text = "Listar alunos";
             btnListar.UseVisualStyleBackColor = true;
             btnListar.Click += btnListar_Click;
             // 
             // dgvExibirAlunos
             // 
+            dgvExibirAlunos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvExibirAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvExibirAlunos.Location = new Point(129, 203);
+            dgvExibirAlunos.Dock = DockStyle.Bottom;
+            dgvExibirAlunos.Location = new Point(0, 187);
             dgvExibirAlunos.Name = "dgvExibirAlunos";
-            dgvExibirAlunos.Size = new Size(569, 210);
+            dgvExibirAlunos.Size = new Size(800, 263);
             dgvExibirAlunos.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(344, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(108, 21);
+            label1.TabIndex = 5;
+            label1.Text = "Listar Alunos";
             // 
             // F_Listar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(dgvExibirAlunos);
             Controls.Add(btnListar);
-            Controls.Add(btnBuscar);
-            Controls.Add(txtMatricula);
-            Controls.Add(txtNome);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "F_Listar";
@@ -102,11 +85,8 @@
         }
 
         #endregion
-
-        private TextBox txtNome;
-        private TextBox txtMatricula;
-        private Button btnBuscar;
         private Button btnListar;
         private DataGridView dgvExibirAlunos;
+        private Label label1;
     }
 }

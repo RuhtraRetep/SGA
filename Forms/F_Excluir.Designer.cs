@@ -31,31 +31,46 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Excluir));
             txtMatricula = new TextBox();
             btnDeletar = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // txtMatricula
             // 
-            txtMatricula.Location = new Point(359, 99);
+            txtMatricula.Font = new Font("Segoe UI", 10F);
+            txtMatricula.Location = new Point(342, 108);
             txtMatricula.Name = "txtMatricula";
             txtMatricula.PlaceholderText = "Matricula";
-            txtMatricula.Size = new Size(100, 23);
+            txtMatricula.Size = new Size(120, 25);
             txtMatricula.TabIndex = 0;
             // 
             // btnDeletar
             // 
-            btnDeletar.Location = new Point(370, 166);
+            btnDeletar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeletar.Location = new Point(363, 173);
             btnDeletar.Name = "btnDeletar";
-            btnDeletar.Size = new Size(75, 23);
+            btnDeletar.Size = new Size(79, 32);
             btnDeletar.TabIndex = 1;
             btnDeletar.Text = "Excluir";
             btnDeletar.UseVisualStyleBackColor = true;
             btnDeletar.Click += btnDeletar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(295, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(221, 42);
+            label1.TabIndex = 2;
+            label1.Text = "Digite a matrícula do Aluno\r\n p/ excluir o aluno";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // F_Excluir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(btnDeletar);
             Controls.Add(txtMatricula);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -71,5 +86,6 @@
 
         private TextBox txtMatricula;
         private Button btnDeletar;
+        private Label label1;
     }
 }
