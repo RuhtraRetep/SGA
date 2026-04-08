@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -98,7 +99,18 @@ namespace Forms
         }
         private void Alterar()
         {
-            try
+
+			try
+			{
+				MailAddress m = new MailAddress(txtAlterarEmail.Text);
+			}
+			catch
+			{
+				MessageBox.Show("Digite um E-mail válido");
+				return;
+			}
+
+			try
             {
                 using (MySqlConnection conn = new MySqlConnection(conexao))
                 {

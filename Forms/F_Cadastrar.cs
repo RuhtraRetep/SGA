@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
 
@@ -36,6 +37,16 @@ namespace Forms
 
 
             string query = "INSERT INTO alunos (nome, cpf, nascimento, endereco, telefone, email) VALUES (@nome, @cpf, @data_nascimento, @endereco, @telefone, @email)";
+
+            try
+            {
+                MailAddress m = new MailAddress(txtEmail.Text);
+            }
+            catch 
+            {
+                MessageBox.Show("Digite um E-mail válido");
+                return;
+            }
 
             try
             {
