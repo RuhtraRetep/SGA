@@ -36,6 +36,9 @@
             toolStripSeparator = new ToolStripSeparator();
             salvarToolStripMenuItem = new ToolStripMenuItem();
             salvarComoToolStripMenuItem = new ToolStripMenuItem();
+            exportarToolStripMenuItem = new ToolStripMenuItem();
+            telaCheiaParaPDFToolStripMenuItem = new ToolStripMenuItem();
+            formulárioPDFToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             imprimirToolStripMenuItem = new ToolStripMenuItem();
             visualizarImpressãoToolStripMenuItem = new ToolStripMenuItem();
@@ -58,6 +61,13 @@
             ferramentasToolStripMenuItem = new ToolStripMenuItem();
             personalizarToolStripMenuItem = new ToolStripMenuItem();
             opçõesToolStripMenuItem = new ToolStripMenuItem();
+            janelaToolStripMenuItem = new ToolStripMenuItem();
+            organizarToolStripMenuItem = new ToolStripMenuItem();
+            cascataToolStripMenuItem = new ToolStripMenuItem();
+            ladoALadoToolStripMenuItem = new ToolStripMenuItem();
+            verticalToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator9 = new ToolStripSeparator();
+            fecharTudoToolStripMenuItem = new ToolStripMenuItem();
             ajudaToolStripMenuItem = new ToolStripMenuItem();
             sumárioToolStripMenuItem = new ToolStripMenuItem();
             índiceToolStripMenuItem = new ToolStripMenuItem();
@@ -89,8 +99,9 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, funcionalidadesToolStripMenuItem, editarToolStripMenuItem, ferramentasToolStripMenuItem, ajudaToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, funcionalidadesToolStripMenuItem, editarToolStripMenuItem, ferramentasToolStripMenuItem, janelaToolStripMenuItem, ajudaToolStripMenuItem });
             menuStrip1.Location = new Point(5, 0);
+            menuStrip1.MdiWindowListItem = janelaToolStripMenuItem;
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(790, 24);
             menuStrip1.TabIndex = 0;
@@ -98,7 +109,7 @@
             // 
             // arquivoToolStripMenuItem
             // 
-            arquivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { novaToolStripMenuItem, abrirToolStripMenuItem, toolStripSeparator, salvarToolStripMenuItem, salvarComoToolStripMenuItem, toolStripSeparator1, imprimirToolStripMenuItem, visualizarImpressãoToolStripMenuItem, toolStripSeparator2, sairToolStripMenuItem });
+            arquivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { novaToolStripMenuItem, abrirToolStripMenuItem, toolStripSeparator, salvarToolStripMenuItem, salvarComoToolStripMenuItem, exportarToolStripMenuItem, toolStripSeparator1, imprimirToolStripMenuItem, visualizarImpressãoToolStripMenuItem, toolStripSeparator2, sairToolStripMenuItem });
             arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             arquivoToolStripMenuItem.Size = new Size(61, 20);
             arquivoToolStripMenuItem.Text = "&Arquivo";
@@ -140,6 +151,27 @@
             salvarComoToolStripMenuItem.Name = "salvarComoToolStripMenuItem";
             salvarComoToolStripMenuItem.Size = new Size(180, 22);
             salvarComoToolStripMenuItem.Text = "Salvar &Como";
+            // 
+            // exportarToolStripMenuItem
+            // 
+            exportarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { telaCheiaParaPDFToolStripMenuItem, formulárioPDFToolStripMenuItem });
+            exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            exportarToolStripMenuItem.Size = new Size(180, 22);
+            exportarToolStripMenuItem.Text = "Exportar";
+            // 
+            // telaCheiaParaPDFToolStripMenuItem
+            // 
+            telaCheiaParaPDFToolStripMenuItem.Name = "telaCheiaParaPDFToolStripMenuItem";
+            telaCheiaParaPDFToolStripMenuItem.Size = new Size(156, 22);
+            telaCheiaParaPDFToolStripMenuItem.Text = "Tela Cheia PDF";
+            telaCheiaParaPDFToolStripMenuItem.Click += telaCheiaParaPDFToolStripMenuItem_Click;
+            // 
+            // formulárioPDFToolStripMenuItem
+            // 
+            formulárioPDFToolStripMenuItem.Name = "formulárioPDFToolStripMenuItem";
+            formulárioPDFToolStripMenuItem.Size = new Size(156, 22);
+            formulárioPDFToolStripMenuItem.Text = "Formulário PDF";
+            formulárioPDFToolStripMenuItem.Click += formulárioPDFToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
@@ -300,6 +332,55 @@
             opçõesToolStripMenuItem.Size = new Size(137, 22);
             opçõesToolStripMenuItem.Text = "&Opções";
             // 
+            // janelaToolStripMenuItem
+            // 
+            janelaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { organizarToolStripMenuItem, toolStripSeparator9, fecharTudoToolStripMenuItem });
+            janelaToolStripMenuItem.Name = "janelaToolStripMenuItem";
+            janelaToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.Delete;
+            janelaToolStripMenuItem.Size = new Size(51, 20);
+            janelaToolStripMenuItem.Text = "&Janela";
+            // 
+            // organizarToolStripMenuItem
+            // 
+            organizarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cascataToolStripMenuItem, ladoALadoToolStripMenuItem, verticalToolStripMenuItem });
+            organizarToolStripMenuItem.Name = "organizarToolStripMenuItem";
+            organizarToolStripMenuItem.Size = new Size(214, 22);
+            organizarToolStripMenuItem.Text = "Organizar";
+            // 
+            // cascataToolStripMenuItem
+            // 
+            cascataToolStripMenuItem.Name = "cascataToolStripMenuItem";
+            cascataToolStripMenuItem.Size = new Size(138, 22);
+            cascataToolStripMenuItem.Text = "Cascata";
+            cascataToolStripMenuItem.Click += cascataToolStripMenuItem_Click;
+            // 
+            // ladoALadoToolStripMenuItem
+            // 
+            ladoALadoToolStripMenuItem.Name = "ladoALadoToolStripMenuItem";
+            ladoALadoToolStripMenuItem.Size = new Size(138, 22);
+            ladoALadoToolStripMenuItem.Text = "Lado a Lado";
+            ladoALadoToolStripMenuItem.Click += ladoALadoToolStripMenuItem_Click;
+            // 
+            // verticalToolStripMenuItem
+            // 
+            verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            verticalToolStripMenuItem.Size = new Size(138, 22);
+            verticalToolStripMenuItem.Text = "Vertical";
+            verticalToolStripMenuItem.Click += verticalToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator9
+            // 
+            toolStripSeparator9.Name = "toolStripSeparator9";
+            toolStripSeparator9.Size = new Size(211, 6);
+            // 
+            // fecharTudoToolStripMenuItem
+            // 
+            fecharTudoToolStripMenuItem.Name = "fecharTudoToolStripMenuItem";
+            fecharTudoToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.D;
+            fecharTudoToolStripMenuItem.Size = new Size(214, 22);
+            fecharTudoToolStripMenuItem.Text = "Fechar Tudo";
+            fecharTudoToolStripMenuItem.Click += fecharTudoToolStripMenuItem_Click;
+            // 
             // ajudaToolStripMenuItem
             // 
             ajudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sumárioToolStripMenuItem, índiceToolStripMenuItem, pesquisarToolStripMenuItem, toolStripSeparator5, sobreToolStripMenuItem });
@@ -355,7 +436,7 @@
             toolStripButton1.Name = "toolStripButton1";
             toolStripButton1.Padding = new Padding(5, 0, 5, 0);
             toolStripButton1.Size = new Size(30, 47);
-            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.Text = "Abrir";
             // 
             // toolStripButton2
             // 
@@ -365,7 +446,7 @@
             toolStripButton2.Name = "toolStripButton2";
             toolStripButton2.Padding = new Padding(5, 0, 5, 0);
             toolStripButton2.Size = new Size(30, 47);
-            toolStripButton2.Text = "toolStripButton2";
+            toolStripButton2.Text = "Salvar Como";
             // 
             // toolStripButton3
             // 
@@ -375,7 +456,7 @@
             toolStripButton3.Name = "toolStripButton3";
             toolStripButton3.Padding = new Padding(5, 0, 5, 0);
             toolStripButton3.Size = new Size(30, 47);
-            toolStripButton3.Text = "toolStripButton3";
+            toolStripButton3.Text = "Imprimir";
             // 
             // toolStripSeparator6
             // 
@@ -390,7 +471,7 @@
             toolStripButton4.Name = "toolStripButton4";
             toolStripButton4.Padding = new Padding(5, 0, 5, 0);
             toolStripButton4.Size = new Size(30, 47);
-            toolStripButton4.Text = "toolStripButton4";
+            toolStripButton4.Text = "Recortar";
             // 
             // toolStripButton5
             // 
@@ -400,7 +481,7 @@
             toolStripButton5.Name = "toolStripButton5";
             toolStripButton5.Padding = new Padding(5, 0, 5, 0);
             toolStripButton5.Size = new Size(30, 47);
-            toolStripButton5.Text = "toolStripButton5";
+            toolStripButton5.Text = "Copiar";
             // 
             // toolStripButton6
             // 
@@ -410,7 +491,7 @@
             toolStripButton6.Name = "toolStripButton6";
             toolStripButton6.Padding = new Padding(5, 0, 5, 0);
             toolStripButton6.Size = new Size(30, 47);
-            toolStripButton6.Text = "toolStripButton6";
+            toolStripButton6.Text = "Colar";
             // 
             // toolStripSeparator7
             // 
@@ -425,7 +506,7 @@
             toolStripButton7.Name = "toolStripButton7";
             toolStripButton7.Padding = new Padding(5, 0, 5, 0);
             toolStripButton7.Size = new Size(30, 47);
-            toolStripButton7.Text = "toolStripButton7";
+            toolStripButton7.Text = "Cadastrar";
             toolStripButton7.Click += toolStripButton7_Click;
             // 
             // toolStripButton8
@@ -436,7 +517,7 @@
             toolStripButton8.Name = "toolStripButton8";
             toolStripButton8.Padding = new Padding(5, 0, 5, 0);
             toolStripButton8.Size = new Size(30, 47);
-            toolStripButton8.Text = "toolStripButton8";
+            toolStripButton8.Text = "Excluir";
             toolStripButton8.Click += toolStripButton8_Click;
             // 
             // toolStripButton9
@@ -447,7 +528,7 @@
             toolStripButton9.Name = "toolStripButton9";
             toolStripButton9.Padding = new Padding(5, 0, 5, 0);
             toolStripButton9.Size = new Size(30, 47);
-            toolStripButton9.Text = "toolStripButton9";
+            toolStripButton9.Text = "Alterar";
             toolStripButton9.Click += toolStripButton9_Click;
             // 
             // toolStripButton10
@@ -458,7 +539,7 @@
             toolStripButton10.Name = "toolStripButton10";
             toolStripButton10.Padding = new Padding(5, 0, 5, 0);
             toolStripButton10.Size = new Size(30, 47);
-            toolStripButton10.Text = "toolStripButton10";
+            toolStripButton10.Text = "Listar";
             toolStripButton10.Click += toolStripButton10_Click;
             // 
             // toolStripSeparator8
@@ -474,7 +555,7 @@
             toolStripButton11.Name = "toolStripButton11";
             toolStripButton11.Padding = new Padding(5, 0, 5, 0);
             toolStripButton11.Size = new Size(30, 47);
-            toolStripButton11.Text = "toolStripButton11";
+            toolStripButton11.Text = "Ajuda";
             // 
             // txtBuscar
             // 
@@ -482,6 +563,7 @@
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(100, 50);
+            txtBuscar.KeyDown += txtBuscar_KeyDown;
             // 
             // toolStripButton12
             // 
@@ -491,7 +573,7 @@
             toolStripButton12.ImageTransparentColor = Color.Magenta;
             toolStripButton12.Name = "toolStripButton12";
             toolStripButton12.Size = new Size(23, 47);
-            toolStripButton12.Text = "toolStripButton12";
+            toolStripButton12.Text = "Buscar";
             toolStripButton12.Click += toolStripButton12_Click;
             // 
             // dgvExibirAlunos
@@ -500,10 +582,12 @@
             dgvExibirAlunos.BackgroundColor = Color.Gray;
             dgvExibirAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvExibirAlunos.Dock = DockStyle.Bottom;
-            dgvExibirAlunos.Location = new Point(5, 228);
+            dgvExibirAlunos.Location = new Point(5, 185);
             dgvExibirAlunos.Name = "dgvExibirAlunos";
-            dgvExibirAlunos.Size = new Size(790, 369);
+            dgvExibirAlunos.Size = new Size(790, 412);
             dgvExibirAlunos.TabIndex = 3;
+            dgvExibirAlunos.Visible = false;
+            dgvExibirAlunos.DoubleClick += dgvExibirAlunos_DoubleClick;
             // 
             // F_TelaPrincipal
             // 
@@ -584,5 +668,15 @@
         private ToolStripMenuItem atualizarToolStripMenuItem;
         private ToolStripMenuItem listarToolStripMenuItem;
         private DataGridView dgvExibirAlunos;
+        private ToolStripMenuItem janelaToolStripMenuItem;
+        private ToolStripMenuItem organizarToolStripMenuItem;
+        private ToolStripMenuItem cascataToolStripMenuItem;
+        private ToolStripMenuItem ladoALadoToolStripMenuItem;
+        private ToolStripMenuItem verticalToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator9;
+        private ToolStripMenuItem fecharTudoToolStripMenuItem;
+        private ToolStripMenuItem exportarToolStripMenuItem;
+        private ToolStripMenuItem telaCheiaParaPDFToolStripMenuItem;
+        private ToolStripMenuItem formulárioPDFToolStripMenuItem;
     }
 }

@@ -32,8 +32,7 @@ namespace Forms
                         conn.Open();
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@matricula", Convert.ToInt32(txtMatricula.Text));
-                        int linhasAfetadas = cmd.ExecuteNonQuery();
-
+                        int linhasAfetadas = cmd.ExecuteNonQuery(); 
                         if (linhasAfetadas > 0)
                         {
                             MessageBox.Show("Aluno deletado com sucesso.");
