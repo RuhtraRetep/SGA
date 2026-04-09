@@ -27,7 +27,7 @@ namespace Forms
                 string query = "Select matricula From Alunos WHERE matricula = @matricula;";
                 matricula = Convert.ToInt32(txtMatricula.Text);
 
-				using (MySqlConnection conn = new MySqlConnection(conexao))
+                using (MySqlConnection conn = new MySqlConnection(conexao))
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -65,31 +65,31 @@ namespace Forms
             }
 
             if (clbEscolherAlteracao.GetItemChecked(0))
-            { txtAlterarNome.Visible = true; label3.Visible = true; }
-            else { txtAlterarNome.Visible = false; label3.Visible = false; }
+            { txtAlterarNome.Visible = true; label14.Visible = true; }
+            else { txtAlterarNome.Visible = false; label14.Visible = false; }
 
             if (clbEscolherAlteracao.GetItemChecked(1))
-            { mkdAlterarDataNascimento.Visible = true; label6.Visible = true; }
-            else { mkdAlterarDataNascimento.Visible = false; label6.Visible = false; }
+            { mkdAlterarDataNascimento.Visible = true; label11.Visible = true; }
+            else { mkdAlterarDataNascimento.Visible = false; label11.Visible = false; }
 
             if (clbEscolherAlteracao.GetItemChecked(2))
-            { mkdAlterarCpf.Visible = true; label5.Visible = true; }
-            else { mkdAlterarCpf.Visible = false; label5.Visible = false; }
+            { mkdAlterarCpf.Visible = true; label12.Visible = true; }
+            else { mkdAlterarCpf.Visible = false; label12.Visible = false; }
 
             if (clbEscolherAlteracao.GetItemChecked(3))
-            { txtAlterarEndereco.Visible = true; label7.Visible = true; }
-            else { txtAlterarEndereco.Visible = false; label7.Visible = false; }
+            { txtAlterarEndereco.Visible = true; label10.Visible = true; }
+            else { txtAlterarEndereco.Visible = false; label10.Visible = false; }
 
             if (clbEscolherAlteracao.GetItemChecked(4))
-            { mkdAlterarTelefone.Visible = true; label4.Visible = true; }
-            else { mkdAlterarTelefone.Visible = false; label4.Visible = false; }
+            { mkdAlterarTelefone.Visible = true; label13.Visible = true; }
+            else { mkdAlterarTelefone.Visible = false; label13.Visible = false; }
 
             if (clbEscolherAlteracao.GetItemChecked(5))
-            { txtAlterarEmail.Visible = true; label8.Visible = true; }
-            else { txtAlterarEmail.Visible = false; label8.Visible = false; }
+            { txtAlterarEmail.Visible = true; label9.Visible = true; }
+            else { txtAlterarEmail.Visible = false; label9.Visible = false; }
 
             panel1.Visible = false;
-            panel2.Visible = true;
+            panel4.Visible = true;
             return;
 
         }
@@ -100,17 +100,9 @@ namespace Forms
         private void Alterar()
         {
 
-			try
-			{
-				MailAddress m = new MailAddress(txtAlterarEmail.Text);
-			}
-			catch
-			{
-				MessageBox.Show("Digite um E-mail válido");
-				return;
-			}
+            
 
-			try
+            try
             {
                 using (MySqlConnection conn = new MySqlConnection(conexao))
                 {
@@ -126,47 +118,56 @@ namespace Forms
                     if (txtAlterarNome.Text != string.Empty)
                     {
                         string query = "Update Alunos SET nome = @nome WHERE matricula = @matricula ";
-						MySqlCommand cmd = new MySqlCommand(query, conn);
-						cmd.Parameters.AddWithValue("@nome", txtAlterarNome.Text);
-						cmd.Parameters.AddWithValue("@matricula", matricula);
-						linhasAfetadas = cmd.ExecuteNonQuery();         
-					}
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@nome", txtAlterarNome.Text);
+                        cmd.Parameters.AddWithValue("@matricula", matricula);
+                        linhasAfetadas = cmd.ExecuteNonQuery();
+                    }
 
-					if (txtAlterarEmail.Text != string.Empty)
-					{
-						string query = "Update Alunos SET email = @email WHERE matricula = @matricula ";
-						MySqlCommand cmd = new MySqlCommand(query, conn);
-						cmd.Parameters.AddWithValue("@email", txtAlterarEmail.Text);
-						cmd.Parameters.AddWithValue("@matricula", matricula);
-						linhasAfetadas = cmd.ExecuteNonQuery();
-					}
+                    if (txtAlterarEmail.Text != string.Empty)
+                    {
+                        try
+                        {
+                            MailAddress m = new MailAddress(txtAlterarEmail.Text);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Digite um E-mail válido");
+                            return;
+                        }
+                        string query = "Update Alunos SET email = @email WHERE matricula = @matricula ";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@email", txtAlterarEmail.Text);
+                        cmd.Parameters.AddWithValue("@matricula", matricula);
+                        linhasAfetadas = cmd.ExecuteNonQuery();
+                    }
 
-					if (txtAlterarEndereco.Text != string.Empty)
-					{
-						string query = "Update Alunos SET endereco = @endereco WHERE matricula = @matricula ";
-						MySqlCommand cmd = new MySqlCommand(query, conn);
-						cmd.Parameters.AddWithValue("@endereco", txtAlterarEndereco.Text);
-						cmd.Parameters.AddWithValue("@matricula", matricula);
-						linhasAfetadas = cmd.ExecuteNonQuery();
-					}
+                    if (txtAlterarEndereco.Text != string.Empty)
+                    {
+                        string query = "Update Alunos SET endereco = @endereco WHERE matricula = @matricula ";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@endereco", txtAlterarEndereco.Text);
+                        cmd.Parameters.AddWithValue("@matricula", matricula);
+                        linhasAfetadas = cmd.ExecuteNonQuery();
+                    }
 
-					if (mkdAlterarCpf.MaskFull != false)
-					{
-						string query = "Update Alunos SET cpf = @CPF WHERE matricula = @matricula ";
-						MySqlCommand cmd = new MySqlCommand(query, conn);
-						cmd.Parameters.AddWithValue("@CPF", mkdAlterarCpf.Text);
-						cmd.Parameters.AddWithValue("@matricula", matricula);
-						linhasAfetadas = cmd.ExecuteNonQuery();
-					}
+                    if (mkdAlterarCpf.MaskFull != false)
+                    {
+                        string query = "Update Alunos SET cpf = @CPF WHERE matricula = @matricula ";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@CPF", mkdAlterarCpf.Text);
+                        cmd.Parameters.AddWithValue("@matricula", matricula);
+                        linhasAfetadas = cmd.ExecuteNonQuery();
+                    }
 
-					if (mkdAlterarDataNascimento.MaskFull != false)
-					{
-						string query = "Update Alunos SET nascimento = @dataNascimento WHERE matricula = @matricula ";
-						MySqlCommand cmd = new MySqlCommand(query, conn);
-						cmd.Parameters.AddWithValue("@dataNascimento", mkdAlterarDataNascimento.Text);
-						cmd.Parameters.AddWithValue("@matricula", matricula);
-						linhasAfetadas = cmd.ExecuteNonQuery();
-					}
+                    if (mkdAlterarDataNascimento.MaskFull != false)
+                    {
+                        string query = "Update Alunos SET nascimento = @dataNascimento WHERE matricula = @matricula ";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@dataNascimento", mkdAlterarDataNascimento.Text);
+                        cmd.Parameters.AddWithValue("@matricula", matricula);
+                        linhasAfetadas = cmd.ExecuteNonQuery();
+                    }
 
                     if (mkdAlterarTelefone.MaskFull != false)
                     {
@@ -174,7 +175,7 @@ namespace Forms
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@telefone", mkdAlterarTelefone.Text);
                         cmd.Parameters.AddWithValue("@matricula", matricula);
-						linhasAfetadas = cmd.ExecuteNonQuery();
+                        linhasAfetadas = cmd.ExecuteNonQuery();
 
                     }
 
@@ -185,16 +186,18 @@ namespace Forms
                     }
                     else
                     {
-						MessageBox.Show("Algo deu errado :(");
-					}
-                    panel2.Visible = false;
+                        MessageBox.Show("Algo deu errado :(");
+                    }
+                    panel4.Visible = false;
+                    panel3.Visible = true;
 
-				}
+                }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnAlterar_Click(object sender, EventArgs e)
+
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
             Alterar();
         }

@@ -38,11 +38,11 @@
             // btnListar
             // 
             btnListar.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnListar.Location = new Point(357, 95);
+            btnListar.Location = new Point(351, 92);
             btnListar.Name = "btnListar";
             btnListar.Size = new Size(81, 31);
             btnListar.TabIndex = 3;
-            btnListar.Text = "Listar alunos";
+            btnListar.Text = "Listar";
             btnListar.UseVisualStyleBackColor = true;
             btnListar.Click += btnListar_Click;
             // 
@@ -51,7 +51,7 @@
             dgvExibirAlunos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvExibirAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvExibirAlunos.Dock = DockStyle.Bottom;
-            dgvExibirAlunos.Location = new Point(0, 187);
+            dgvExibirAlunos.Location = new Point(0, 148);
             dgvExibirAlunos.Name = "dgvExibirAlunos";
             dgvExibirAlunos.Size = new Size(800, 263);
             dgvExibirAlunos.TabIndex = 4;
@@ -59,10 +59,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(344, 20);
+            label1.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
+            label1.Location = new Point(282, 21);
             label1.Name = "label1";
-            label1.Size = new Size(108, 21);
+            label1.Size = new Size(228, 46);
             label1.TabIndex = 5;
             label1.Text = "Listar Alunos";
             // 
@@ -70,12 +70,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 411);
             Controls.Add(label1);
             Controls.Add(dgvExibirAlunos);
             Controls.Add(btnListar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "F_Listar";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Listar Alunos";

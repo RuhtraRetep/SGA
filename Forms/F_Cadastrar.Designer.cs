@@ -50,7 +50,7 @@
             // 
             btnEnviar.Anchor = AnchorStyles.Top;
             btnEnviar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEnviar.Location = new Point(190, 281);
+            btnEnviar.Location = new Point(354, 322);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(107, 37);
             btnEnviar.TabIndex = 11;
@@ -74,9 +74,9 @@
             panel2.Controls.Add(mkdCpf);
             panel2.Controls.Add(mkdTelefone);
             panel2.Controls.Add(txtEndereco);
-            panel2.Location = new Point(214, 48);
+            panel2.Location = new Point(108, 24);
             panel2.Name = "panel2";
-            panel2.Size = new Size(442, 367);
+            panel2.Size = new Size(585, 375);
             panel2.TabIndex = 14;
             // 
             // label8
@@ -84,7 +84,7 @@
             label8.Anchor = AnchorStyles.Top;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label8.Location = new Point(46, 181);
+            label8.Location = new Point(25, 138);
             label8.Name = "label8";
             label8.Size = new Size(116, 17);
             label8.TabIndex = 17;
@@ -95,7 +95,7 @@
             label7.Anchor = AnchorStyles.Top;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label7.Location = new Point(46, 106);
+            label7.Location = new Point(25, 76);
             label7.Name = "label7";
             label7.Size = new Size(64, 17);
             label7.TabIndex = 16;
@@ -106,7 +106,7 @@
             label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label6.Location = new Point(279, 17);
+            label6.Location = new Point(25, 202);
             label6.Name = "label6";
             label6.Size = new Size(133, 34);
             label6.TabIndex = 15;
@@ -117,7 +117,7 @@
             label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label5.Location = new Point(278, 104);
+            label5.Location = new Point(193, 219);
             label5.Name = "label5";
             label5.Size = new Size(92, 17);
             label5.TabIndex = 14;
@@ -128,7 +128,7 @@
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label4.Location = new Point(278, 181);
+            label4.Location = new Point(361, 219);
             label4.Name = "label4";
             label4.Size = new Size(130, 17);
             label4.TabIndex = 13;
@@ -139,7 +139,7 @@
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label3.Location = new Point(46, 32);
+            label3.Location = new Point(25, 17);
             label3.Name = "label3";
             label3.Size = new Size(115, 19);
             label3.TabIndex = 12;
@@ -148,16 +148,16 @@
             // txtNome
             // 
             txtNome.Anchor = AnchorStyles.Top;
-            txtNome.Location = new Point(47, 54);
+            txtNome.Location = new Point(26, 39);
             txtNome.Name = "txtNome";
-            txtNome.PlaceholderText = "Digite o Nome";
-            txtNome.Size = new Size(122, 23);
+            txtNome.PlaceholderText = "Digite o Nome Completo";
+            txtNome.Size = new Size(427, 23);
             txtNome.TabIndex = 0;
             // 
             // mkdDataNascimento
             // 
             mkdDataNascimento.Anchor = AnchorStyles.Top;
-            mkdDataNascimento.Location = new Point(279, 54);
+            mkdDataNascimento.Location = new Point(25, 239);
             mkdDataNascimento.Mask = "00/00/0000";
             mkdDataNascimento.Name = "mkdDataNascimento";
             mkdDataNascimento.Size = new Size(100, 23);
@@ -167,16 +167,16 @@
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Top;
-            txtEmail.Location = new Point(47, 199);
+            txtEmail.Location = new Point(26, 156);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "example@gmail.com";
-            txtEmail.Size = new Size(122, 23);
+            txtEmail.Size = new Size(427, 23);
             txtEmail.TabIndex = 10;
             // 
             // mkdCpf
             // 
             mkdCpf.Anchor = AnchorStyles.Top;
-            mkdCpf.Location = new Point(279, 124);
+            mkdCpf.Location = new Point(194, 239);
             mkdCpf.Mask = "000,000,000-00";
             mkdCpf.Name = "mkdCpf";
             mkdCpf.Size = new Size(100, 23);
@@ -185,7 +185,7 @@
             // mkdTelefone
             // 
             mkdTelefone.Anchor = AnchorStyles.Top;
-            mkdTelefone.Location = new Point(279, 199);
+            mkdTelefone.Location = new Point(361, 239);
             mkdTelefone.Mask = "(00)00000-0000";
             mkdTelefone.Name = "mkdTelefone";
             mkdTelefone.Size = new Size(100, 23);
@@ -194,20 +194,22 @@
             // txtEndereco
             // 
             txtEndereco.Anchor = AnchorStyles.Top;
-            txtEndereco.Location = new Point(47, 124);
+            txtEndereco.Location = new Point(26, 94);
             txtEndereco.Name = "txtEndereco";
-            txtEndereco.PlaceholderText = "Cidade";
-            txtEndereco.Size = new Size(122, 23);
+            txtEndereco.PlaceholderText = "Logradouro, Número - Complemento, Bairro, Cidade - UF";
+            txtEndereco.Size = new Size(505, 23);
             txtEndereco.TabIndex = 8;
             // 
             // F_Cadastrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 411);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "F_Cadastrar";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastrar Aluno";

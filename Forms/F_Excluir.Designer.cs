@@ -32,21 +32,24 @@
             txtMatricula = new TextBox();
             btnDeletar = new Button();
             label1 = new Label();
+            panel1 = new Panel();
+            label2 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // txtMatricula
             // 
             txtMatricula.Font = new Font("Segoe UI", 10F);
-            txtMatricula.Location = new Point(342, 108);
+            txtMatricula.Location = new Point(110, 82);
             txtMatricula.Name = "txtMatricula";
             txtMatricula.PlaceholderText = "Matricula";
-            txtMatricula.Size = new Size(120, 25);
+            txtMatricula.Size = new Size(66, 25);
             txtMatricula.TabIndex = 0;
             // 
             // btnDeletar
             // 
             btnDeletar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDeletar.Location = new Point(363, 173);
+            btnDeletar.Location = new Point(104, 150);
             btnDeletar.Name = "btnDeletar";
             btnDeletar.Size = new Size(79, 32);
             btnDeletar.TabIndex = 1;
@@ -57,27 +60,51 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(295, 23);
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label1.Location = new Point(47, 25);
             label1.Name = "label1";
-            label1.Size = new Size(221, 42);
+            label1.Size = new Size(193, 38);
             label1.TabIndex = 2;
             label1.Text = "Digite a matrícula do Aluno\r\n p/ excluir o aluno";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ControlDark;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(txtMatricula);
+            panel1.Controls.Add(btnDeletar);
+            panel1.Location = new Point(256, 111);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(288, 225);
+            panel1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 24.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(289, 30);
+            label2.Name = "label2";
+            label2.Size = new Size(223, 45);
+            label2.TabIndex = 4;
+            label2.Text = "Excluir Aluno";
             // 
             // F_Excluir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
-            Controls.Add(btnDeletar);
-            Controls.Add(txtMatricula);
+            ClientSize = new Size(800, 411);
+            Controls.Add(label2);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "F_Excluir";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Excluir Aluno";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -87,5 +114,7 @@
         private TextBox txtMatricula;
         private Button btnDeletar;
         private Label label1;
+        private Panel panel1;
+        private Label label2;
     }
 }
