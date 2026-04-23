@@ -560,9 +560,11 @@
             // txtBuscar
             // 
             txtBuscar.Alignment = ToolStripItemAlignment.Right;
+            txtBuscar.AutoSize = false;
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(100, 50);
+            txtBuscar.Padding = new Padding(5, 0, 5, 0);
+            txtBuscar.Size = new Size(235, 23);
             txtBuscar.KeyDown += txtBuscar_KeyDown;
             // 
             // toolStripButton12
@@ -572,7 +574,8 @@
             toolStripButton12.Image = Properties.Resources.buscar;
             toolStripButton12.ImageTransparentColor = Color.Magenta;
             toolStripButton12.Name = "toolStripButton12";
-            toolStripButton12.Size = new Size(23, 47);
+            toolStripButton12.Padding = new Padding(5, 0, 5, 0);
+            toolStripButton12.Size = new Size(30, 47);
             toolStripButton12.Text = "Buscar";
             toolStripButton12.Click += toolStripButton12_Click;
             // 
