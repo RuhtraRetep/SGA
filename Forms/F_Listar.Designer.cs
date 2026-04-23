@@ -37,8 +37,9 @@
             // 
             // btnListar
             // 
+            btnListar.Anchor = AnchorStyles.Top;
             btnListar.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-
+            btnListar.Location = new Point(440, 221);
             btnListar.Name = "btnListar";
             btnListar.Size = new Size(81, 31);
             btnListar.TabIndex = 3;
@@ -51,16 +52,17 @@
             dgvExibirAlunos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvExibirAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvExibirAlunos.Dock = DockStyle.Bottom;
-
+            dgvExibirAlunos.Location = new Point(0, 329);
             dgvExibirAlunos.Name = "dgvExibirAlunos";
-            dgvExibirAlunos.Size = new Size(872, 187);
+            dgvExibirAlunos.Size = new Size(920, 187);
             dgvExibirAlunos.TabIndex = 4;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
-
+            label1.Location = new Point(376, 47);
             label1.Name = "label1";
             label1.Size = new Size(228, 46);
             label1.TabIndex = 5;
@@ -70,7 +72,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-
+            ClientSize = new Size(920, 516);
             Controls.Add(label1);
             Controls.Add(dgvExibirAlunos);
             Controls.Add(btnListar);

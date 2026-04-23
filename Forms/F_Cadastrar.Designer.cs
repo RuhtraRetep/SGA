@@ -50,7 +50,7 @@
             // 
             btnEnviar.Anchor = AnchorStyles.Top;
             btnEnviar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-
+            btnEnviar.Location = new Point(190, 369);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(107, 37);
             btnEnviar.TabIndex = 6;
@@ -74,7 +74,9 @@
             panel2.Controls.Add(mkdCpf);
             panel2.Controls.Add(mkdTelefone);
             panel2.Controls.Add(txtEndereco);
-
+            panel2.Location = new Point(90, 31);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(550, 459);
             panel2.TabIndex = 14;
             // 
             // label8
@@ -82,7 +84,7 @@
             label8.Anchor = AnchorStyles.Top;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-
+            label8.Location = new Point(59, 274);
             label8.Name = "label8";
             label8.Size = new Size(116, 17);
             label8.TabIndex = 17;
@@ -93,7 +95,7 @@
             label7.Anchor = AnchorStyles.Top;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-
+            label7.Location = new Point(59, 99);
             label7.Name = "label7";
             label7.Size = new Size(64, 17);
             label7.TabIndex = 16;
@@ -104,7 +106,7 @@
             label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-
+            label6.Location = new Point(374, 165);
             label6.Name = "label6";
             label6.Size = new Size(133, 34);
             label6.TabIndex = 15;
@@ -115,7 +117,7 @@
             label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-
+            label5.Location = new Point(59, 182);
             label5.Name = "label5";
             label5.Size = new Size(92, 17);
             label5.TabIndex = 14;
@@ -126,7 +128,7 @@
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-
+            label4.Location = new Point(199, 182);
             label4.Name = "label4";
             label4.Size = new Size(130, 17);
             label4.TabIndex = 13;
@@ -137,7 +139,7 @@
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-
+            label3.Location = new Point(59, 28);
             label3.Name = "label3";
             label3.Size = new Size(115, 19);
             label3.TabIndex = 12;
@@ -146,13 +148,15 @@
             // txtNome
             // 
             txtNome.Anchor = AnchorStyles.Top;
-
+            txtNome.Location = new Point(59, 60);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(331, 23);
             txtNome.TabIndex = 0;
             // 
             // mkdDataNascimento
             // 
             mkdDataNascimento.Anchor = AnchorStyles.Top;
-
+            mkdDataNascimento.Location = new Point(374, 214);
             mkdDataNascimento.Mask = "00/00/0000";
             mkdDataNascimento.Name = "mkdDataNascimento";
             mkdDataNascimento.Size = new Size(65, 23);
@@ -162,12 +166,15 @@
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Top;
-
+            txtEmail.Location = new Point(59, 306);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(320, 23);
+            txtEmail.TabIndex = 18;
             // 
             // mkdCpf
             // 
             mkdCpf.Anchor = AnchorStyles.Top;
-
+            mkdCpf.Location = new Point(59, 214);
             mkdCpf.Mask = "000,000,000-00";
             mkdCpf.Name = "mkdCpf";
             mkdCpf.Size = new Size(83, 23);
@@ -176,7 +183,7 @@
             // mkdTelefone
             // 
             mkdTelefone.Anchor = AnchorStyles.Top;
-
+            mkdTelefone.Location = new Point(199, 214);
             mkdTelefone.Mask = "(00)00000-0000";
             mkdTelefone.Name = "mkdTelefone";
             mkdTelefone.Size = new Size(84, 23);
@@ -185,13 +192,16 @@
             // txtEndereco
             // 
             txtEndereco.Anchor = AnchorStyles.Top;
-
+            txtEndereco.Location = new Point(59, 130);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.Size = new Size(407, 23);
+            txtEndereco.TabIndex = 19;
             // 
             // F_Cadastrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 411);
+            ClientSize = new Size(754, 541);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
