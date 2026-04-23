@@ -55,7 +55,7 @@ O objetivo deste sistema é praticar e demonstrar conhecimentos em desenvolvimen
 ## 📸 Interface
 
 ![Tela de Cadastro de Usuários](assets\Captura de tela 2026-04-23 164424.png)  
-![Tela Principal](assets\Captura de tela 2026-04-23 164403.png)
+![Tela Principal](assets\Captura de tela 2026-04-23 164424.png)
 
 
 ---
