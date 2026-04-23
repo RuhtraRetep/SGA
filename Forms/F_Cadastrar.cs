@@ -50,13 +50,18 @@ namespace Forms
 
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(conexao))
+                string dataNascimento = mkdDataNascimento.Text;
+                DateTime data = DateTime.ParseExact(dataNascimento, ("dd/MM/yyyy"), null);
+                string dataBanco = data.ToString("yyyy-MM-dd");
+                
+
+				using (MySqlConnection conn = new MySqlConnection(conexao))
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nome", txtNome.Text);
                     cmd.Parameters.AddWithValue("@cpf", mkdCpf.Text);
-                    cmd.Parameters.AddWithValue("@data_nascimento", mkdDataNascimento.Text);
+                    cmd.Parameters.AddWithValue("@data_nascimento", dataBanco);
                     cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                     cmd.Parameters.AddWithValue("@telefone", mkdTelefone.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);

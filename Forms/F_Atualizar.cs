@@ -161,9 +161,13 @@ namespace Forms
 
 					if (mkdAlterarDataNascimento.MaskFull != false)
 					{
+						string dataNascimento = mkdAlterarDataNascimento.Text;
+						DateTime data = DateTime.ParseExact(dataNascimento, ("dd/MM/yyyy"), null);
+						string dataBanco = data.ToString("yyyy-MM-dd");
+
 						string query = "Update Alunos SET nascimento = @dataNascimento WHERE matricula = @matricula ";
 						MySqlCommand cmd = new MySqlCommand(query, conn);
-						cmd.Parameters.AddWithValue("@dataNascimento", mkdAlterarDataNascimento.Text);
+						cmd.Parameters.AddWithValue("@dataNascimento", dataBanco);
 						cmd.Parameters.AddWithValue("@matricula", matricula);
 						linhasAfetadas = cmd.ExecuteNonQuery();
 					}

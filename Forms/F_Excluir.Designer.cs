@@ -75,6 +75,8 @@
             Controls.Add(txtMatricula);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "F_Excluir";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Excluir Aluno";

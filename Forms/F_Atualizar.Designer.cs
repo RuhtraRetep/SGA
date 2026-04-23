@@ -313,6 +313,8 @@
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "F_Atualizar";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Atualizar Aluno";
