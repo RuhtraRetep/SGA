@@ -10,6 +10,8 @@ A navegação do sistema é baseada em componentes como **MenuStrip** e **ToolSt
 
 ## 🚀 Funcionalidades
 
+- Cadastro de usuário
+- Verificação de Login
 - Cadastro de alunos
 - Consulta de registros
 - Atualização de informações
@@ -52,7 +54,9 @@ O objetivo deste sistema é praticar e demonstrar conhecimentos em desenvolvimen
 
 ## 📸 Interface
 
-*(Opcional: adicione aqui screenshots do sistema em execução)*
+![Tela de Cadastro de Usuários](C:\Users\tecdev\Pictures\Screenshots\Captura de tela 2026-04-23 164424.png)  
+![Tela Principal](C:\Users\tecdev\Pictures\Screenshots\Captura de tela 2026-04-23 164403.png)
+
 
 ---
 
